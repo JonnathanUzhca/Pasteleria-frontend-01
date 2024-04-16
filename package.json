@@ -75,6 +75,7 @@
     "ngx-material-timepicker": "^13.1.1",
     "ngx-notifier": "^11.0.0",
     "ngx-owl-carousel-o": "^16.0.0",
+    "ngx-quicklink": "^0.4.5",
     "ngx-scrollbar": "^13.0.3",
     "ngx-slider-v2": "^16.0.2",
     "ngx-stars": "^1.6.5",

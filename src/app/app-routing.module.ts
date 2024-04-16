@@ -1,10 +1,26 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { QuicklinkStrategy } from "ngx-quicklink";
+import { RouterModule, Routes } from '@angular/router';
+import { PublicRoutingModule } from './public/public-routing.module';
+import { Error404Component } from './shared/error404/error404.component';
+import { Error500Component } from './shared/error500/error500.component';
+
+const routes: Routes = [
+  {path: "erro", component:Error500Component},
+  {path: "notfound" ,component:Error404Component},
+  {path: "**", redirectTo: "notfound", pathMatch: "full"}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes,{
+      preloadingStrategy: QuicklinkStrategy,
+      enableTracing: false,
+      paramsInheritanceStrategy: "always",
+  }),
+  PublicRoutingModule,
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
