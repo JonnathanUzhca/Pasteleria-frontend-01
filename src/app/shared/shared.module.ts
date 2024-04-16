@@ -44,10 +44,21 @@ import { Error500Component } from './error500/error500.component';
     SidemenuToggleDirective,
     ToggleThemeDirective,
     SwitcherHeaderComponent,
+    
 
     Error404Component,
-    Error500Component
-
+    Error500Component,
+  ],
+  exports: [
+    PageHeaderComponent,
+    TabToTopComponent,
+    FullLayoutComponent,
+    ContentLayoutComponent,
+    ErrorLayoutComponent,
+    SwitcherComponent,
+    LoaderComponent,
+    SwitcherLayoutComponent,
+    RouterModule,
   ],
   imports: [
     CommonModule,
@@ -57,10 +68,5 @@ import { Error500Component } from './error500/error500.component';
     ColorPickerModule,
     FormsModule,
   ],
-  exports : [
-    PageHeaderComponent, TabToTopComponent, FullLayoutComponent, ContentLayoutComponent, ErrorLayoutComponent, SwitcherComponent, LoaderComponent, SwitcherLayoutComponent
-  ],
-  providers: [
-  ]
 })
-export class SharedModule { }
+export class SharedModule {}
