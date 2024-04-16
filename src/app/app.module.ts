@@ -12,6 +12,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ToastrModule } from 'ngx-toastr';
 import { ColorPickerService } from 'ngx-color-picker';
+import { SharedModule } from './shared/shared.module';
+import { PublicModule } from './public/public.module';
+import { AdminModule } from './admin/admin.module';
+import { SellingModule } from './selling/selling.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,9 @@ import { ColorPickerService } from 'ngx-color-picker';
   ],
   imports: [
     BrowserModule,
+    PublicModule,
+    AdminModule,
+    SellingModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
@@ -27,7 +34,9 @@ import { ColorPickerService } from 'ngx-color-picker';
     // AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    SharedModule
   ],
+  
   providers: [ColorPickerService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
