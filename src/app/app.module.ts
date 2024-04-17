@@ -17,6 +17,9 @@ import { PublicModule } from './public/public.module';
 import { AdminModule } from './admin/admin.module';
 import { SellingModule } from './selling/selling.module';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -36,7 +39,7 @@ import { SellingModule } from './selling/selling.module';
     AngularFireAuthModule,
     SharedModule
   ],
-  
+ 
   providers: [ColorPickerService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

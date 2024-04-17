@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 // import { FullLayoutComponent } from './layout-components/layout/full-layout/full-layout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { MenubarModule } from 'primeng/menubar';
+// import { ityped } from 'ityped';
 // import { RightSidebarComponent } from './layout-components/right-sidebar/right-sidebar.component';
 import { FullscreenDirective } from './directives/fullscreen-toggle.directive';
 import { ColorPickerModule } from 'ngx-color-picker';
@@ -21,9 +23,11 @@ import { SidemenuToggleDirective } from './directives/sidemenuToggle';
 import { ToggleThemeDirective } from './directives/toggle-theme.directive';
 // import { SwitcherLayoutComponent } from './layout-components/layout/switcher-layout/switcher-layout.component';
 // import { SwitcherHeaderComponent } from './layout-components/switcher-header/switcherheader.component';
-import { NgScrollbarModule } from 'ngx-scrollbar';
+// import { NgScrollbarModule } from 'ngx-scrollbar';
 import { Error404Component } from './error404/error404.component';
 import { Error500Component } from './error500/error500.component';
+import { MenuPublicComponent } from './menu-public/menu-public.component';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import { Error500Component } from './error500/error500.component';
 
     Error404Component,
     Error500Component,
+    MenuPublicComponent,
   ],
   exports: [
     // PageHeaderComponent,
@@ -59,12 +64,14 @@ import { Error500Component } from './error500/error500.component';
     // LoaderComponent,
     // SwitcherLayoutComponent,
     RouterModule,
+    Error404Component,
+    Error500Component,
+    MenuPublicComponent,
   ],
   imports: [
     CommonModule,
     NgbModule,
     RouterModule,
-    NgScrollbarModule,
     ColorPickerModule,
     FormsModule,
   ],
