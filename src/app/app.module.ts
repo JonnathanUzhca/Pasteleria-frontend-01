@@ -32,6 +32,7 @@ import { SellingModule } from './selling/selling.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    
     FormsModule, ReactiveFormsModule,
     ToastrModule.forRoot(),
     // AngularFireModule.initializeApp(environment.firebase),
