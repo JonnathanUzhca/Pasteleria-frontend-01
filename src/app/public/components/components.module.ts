@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { SeccionMenuComponent } from './seccion-menu/seccion-menu.component';
 import { SeccionProductComponent } from './seccion-product/seccion-product.component';
 import { SeccionContadorComponent } from './seccion-contador/seccion-contador.component';
+import { AboutHeaderComponent } from './about-header/about-header.component';
 
 
 
@@ -13,7 +14,8 @@ import { SeccionContadorComponent } from './seccion-contador/seccion-contador.co
     SliderComponent,
     SeccionMenuComponent,
     SeccionProductComponent,
-    SeccionContadorComponent
+    SeccionContadorComponent,
+    AboutHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { SeccionContadorComponent } from './seccion-contador/seccion-contador.co
     SliderComponent,
     SeccionMenuComponent,
     SeccionProductComponent,
-    SeccionContadorComponent
+    SeccionContadorComponent,
+    AboutHeaderComponent
   ]
 })
 export class ComponentsModule { }
