@@ -23,12 +23,14 @@ import { SidemenuToggleDirective } from './directives/sidemenuToggle';
 import { ToggleThemeDirective } from './directives/toggle-theme.directive';
 // import { SwitcherLayoutComponent } from './layout-components/layout/switcher-layout/switcher-layout.component';
 // import { SwitcherHeaderComponent } from './layout-components/switcher-header/switcherheader.component';
-// import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { Error404Component } from './error404/error404.component';
 import { Error500Component } from './error500/error500.component';
 import { MenuPublicComponent } from './menu-public/menu-public.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { SublevelMenuComponent } from './menu-admin/sublevel-menu.component';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { FooterComponent } from './footer/footer.component';
     Error500Component,
     MenuPublicComponent,
     FooterComponent,
+    MenuAdminComponent,
+    SublevelMenuComponent,
   ],
   exports: [
     // PageHeaderComponent,
@@ -70,7 +74,8 @@ import { FooterComponent } from './footer/footer.component';
     Error404Component,
     Error500Component,
     MenuPublicComponent,
-    FooterComponent
+    FooterComponent,
+    MenuAdminComponent,
   ],
   imports: [
     CommonModule,
@@ -78,7 +83,9 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule,
     ColorPickerModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgScrollbarModule,
+    // RouterModule,
     
   ],
 })
