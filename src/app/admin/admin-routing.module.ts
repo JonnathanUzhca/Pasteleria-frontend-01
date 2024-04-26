@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StoresComponent } from './pages/stores/stores.component';
+import { ClienteComponent } from './pages/user/pages/cliente/cliente.component';
+import { PersonaComponent } from './pages/user/pages/persona/persona.component';
 import { InvoicingComponent } from './pages/invoicing/invoicing.component';
-import { ClientComponent } from './pages/user/pages/client/client.component';
-import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   {
@@ -16,16 +16,8 @@ const routes: Routes = [
       { path: 'dashboard',loadChildren: () =>
         import('./pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
-      { path: 'user', 
-        component: UserComponent,
-        // children: [
-        //   {
-        //     path:'client',
-        //     loadChildren: () =>
-        //       import('./pages/user/pages/client/client.module').then((m) => m.ClientModule)
-        //   }
-        // ]
-      },
+      { path: 'user/client', component: ClienteComponent },
+      { path: 'user/person', component: PersonaComponent },
       { path: 'product', component: ProductComponent },
       { path: 'stores', component: StoresComponent },
       { path: 'invoicing', component: InvoicingComponent}
@@ -34,7 +26,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    // ClientRoutingModule
+  ],
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }

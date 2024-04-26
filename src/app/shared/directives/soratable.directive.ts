@@ -1,6 +1,6 @@
 
 import {Directive, EventEmitter, Input, Output} from '@angular/core';
-import { Country } from 'src/app/components/tables/table-modal/countreies.modal';
+import { Country } from 'src/app/core/interface/countreies.modal';
 
 export type SortColumn = keyof Country | '';
 export type SortDirection = 'asc' | 'desc' | '';

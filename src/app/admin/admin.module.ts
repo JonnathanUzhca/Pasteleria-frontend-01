@@ -6,7 +6,6 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { SharedModule } from '../shared/shared.module';
 import { BodyComponent } from './pages/body/body.component';
-import { UserModule } from './pages/user/user.module';
 
 
 @NgModule({
@@ -18,7 +17,7 @@ import { UserModule } from './pages/user/user.module';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    UserModule,
+    
     SharedModule,
     BrowserAnimationsModule
   ]

@@ -4,7 +4,7 @@ import { InvoicingComponent } from './invoicing.component';
 
 const routes: Routes = [
   {
-    path : '',
+    path:'',
     component: InvoicingComponent
   }
 ];
