@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
+import { CalendarModule } from 'angular-calendar';
 // import { ityped } from 'ityped';
 // import { RightSidebarComponent } from './layout-components/right-sidebar/right-sidebar.component';
 import { FullscreenDirective } from './directives/fullscreen-toggle.directive';
@@ -31,6 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { SublevelMenuComponent } from './menu-admin/sublevel-menu.component';
+// import { FormsModule } from '@angular/forms';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({

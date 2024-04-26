@@ -1,4 +1,5 @@
-import { Country } from "src/app/components/tables/table-modal/countreies.modal";
+import { Country } from "src/app/core/interface/countreies.modal";
+
 
 
 export const COUNTRIES: Country[] = [
