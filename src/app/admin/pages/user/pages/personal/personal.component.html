@@ -1,0 +1,48 @@
+<app-page-header [title]="'Usuario'" [items]="['Personal']" [active_item]="'Home'">
+</app-page-header>
+
+<div class="row row-sm">
+    <div class="col-sm-12 col-lg-12 col-xl-12">
+      <div class="row row-sm">
+        <div class="col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <button class="btn ripple btn-success" (click)="BasicOpen(basicmodal)"><i class="fe fe-edit me-1"></i>Nuevo personal</button> 
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+          <div class="row row-sm">
+            <div class="col-xl-12">
+              <div class="card overflow-visible custom-card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <app-tabla-personal></app-tabla-personal>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ng-template #basicmodal let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-basic-title">Nuevo personal</h6>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      </button>
+    </div>
+    <div class="modal-body">
+      <h6>Informacion</h6>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+        dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn ripple btn-primary" type="button">Save changes</button>
+      <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>

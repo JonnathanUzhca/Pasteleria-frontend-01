@@ -27,15 +27,13 @@ import { SellingModule } from './selling/selling.module';
   imports: [
     BrowserModule,
     PublicModule,
-    AdminModule,
     SellingModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    
-    FormsModule, ReactiveFormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
     ToastrModule.forRoot(),
-    // AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     SharedModule

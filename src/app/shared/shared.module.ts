@@ -32,54 +32,37 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { SublevelMenuComponent } from './menu-admin/sublevel-menu.component';
-// import { FormsModule } from '@angular/forms';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 
 @NgModule({
   declarations: [
-    // HeaderComponent,
-    // FooterComponent,
-    // LoaderComponent,
-    // PageHeaderComponent,
-    // SidebarComponent,
-    // SwitcherComponent,
-    // TabToTopComponent,
-    // ContentLayoutComponent,
-    // SwitcherLayoutComponent,
-    // ErrorLayoutComponent,
-    // FullLayoutComponent,
-    // RightSidebarComponent,
     FullscreenDirective,
     HoverEffectSidebarDirective,
     SidemenuToggleDirective,
     ToggleThemeDirective,
-    // SwitcherHeaderComponent,
-    
-
     Error404Component,
     Error500Component,
     MenuPublicComponent,
     FooterComponent,
     MenuAdminComponent,
     SublevelMenuComponent,
+    HeaderComponent,
+    PageHeaderComponent,
   ],
+
   exports: [
-    // PageHeaderComponent,
-    // TabToTopComponent,
-    // FullLayoutComponent,
-    // ContentLayoutComponent,
-    // ErrorLayoutComponent,
-    // SwitcherComponent,
-    // LoaderComponent,
-    // SwitcherLayoutComponent,
     RouterModule,
     Error404Component,
     Error500Component,
     MenuPublicComponent,
     FooterComponent,
     MenuAdminComponent,
+    HeaderComponent,
+    PageHeaderComponent,
   ],
+
   imports: [
     CommonModule,
     NgbModule,
@@ -88,8 +71,6 @@ import { SublevelMenuComponent } from './menu-admin/sublevel-menu.component';
     FormsModule,
     FlexLayoutModule,
     NgScrollbarModule,
-    // RouterModule,
-    
   ],
 })
 export class SharedModule {}

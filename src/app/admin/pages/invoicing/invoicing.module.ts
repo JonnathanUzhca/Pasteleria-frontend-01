@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { InvoicingRoutingModule } from './invoicing-routing.module';
 import { InvoicingComponent } from './invoicing.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ComponentsModule } from '../../components/components.module';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { InvoicingComponent } from './invoicing.component';
   ],
   imports: [
     CommonModule,
-    InvoicingRoutingModule
+    SharedModule,
+    InvoicingRoutingModule,
+    ComponentsModule
   ]
 })
 export class InvoicingModule { }

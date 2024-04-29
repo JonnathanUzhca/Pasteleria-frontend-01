@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-cliente',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./cliente.component.scss']
 })
 export class ClienteComponent {
+
+  scrolled: boolean = false;
+  
+  @HostListener("window:scroll", [])
+  onWindowScroll() {    
+    this.scrolled = window.scrollY > 70;
+  }
 
 }

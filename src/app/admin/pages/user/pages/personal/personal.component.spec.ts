@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PersonaComponent } from './persona.component';
+import { PersonalComponent } from './personal.component';
 
-describe('PersonaComponent', () => {
-  let component: PersonaComponent;
-  let fixture: ComponentFixture<PersonaComponent>;
+describe('PersonalComponent', () => {
+  let component: PersonalComponent;
+  let fixture: ComponentFixture<PersonalComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PersonaComponent]
+      declarations: [PersonalComponent]
     });
-    fixture = TestBed.createComponent(PersonaComponent);
+    fixture = TestBed.createComponent(PersonalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,23 +4,40 @@ import { AdminComponent } from './admin.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ClienteComponent } from './pages/user/pages/cliente/cliente.component';
-import { PersonaComponent } from './pages/user/pages/persona/persona.component';
 import { InvoicingComponent } from './pages/invoicing/invoicing.component';
+import { PersonalComponent } from './pages/user/pages/personal/personal.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path:'admin',
     component: AdminComponent,
     children : [
-      { path:'', redirectTo:'dashboard', pathMatch:'full'},
+      { path: '', redirectTo:'dashboard', pathMatch:'full'},
+      // { path: 'dashboard', component: DashboardComponent},
       { path: 'dashboard',loadChildren: () =>
         import('./pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
-      { path: 'user/client', component: ClienteComponent },
-      { path: 'user/person', component: PersonaComponent },
-      { path: 'product', component: ProductComponent },
-      { path: 'stores', component: StoresComponent },
-      { path: 'invoicing', component: InvoicingComponent}
+      { path: 'user/client',
+          loadChildren: () =>
+            import('./pages/user/pages/cliente/cliente.module').then((m) => m.ClienteModule)
+      },
+      { path: 'user/person',
+          loadChildren: () =>
+            import('./pages/user/pages/personal/personal.module').then((m) => m.PersonalModule)
+      },
+      { path: 'product',
+          loadChildren: () =>
+            import('./pages/product/product.module').then((m) => m.ProductModule)
+      },
+      { path: 'stores',
+          loadChildren : () =>
+            import('./pages/stores/stores.module').then((m) => m.StoresModule)
+      },
+      { path: 'invoicing',
+          loadChildren: () =>
+            import('./pages/invoicing/invoicing.module').then((m) => m.InvoicingModule)
+      }
     ]
   }
 ];

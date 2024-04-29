@@ -1,8 +1,17 @@
 <div>
+  
+      <app-header></app-header>
+     
+  
   <app-menu-admin (onToggleSideNav)="onToggleSideNav($event)"></app-menu-admin>
+  
+
   <app-body
+  
     [collapsed]="isSideNavCollapsed"
     [screenWidth]="screenWidth"
   >
+  
   </app-body>
+  
 </div>

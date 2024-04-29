@@ -1,1 +1,102 @@
-<p>product works!</p>
+<app-page-header [title]="'Productos'" [items]="['Productos']" [active_item]="'home'"></app-page-header>
+
+<div class="row row-sm">
+    <div class="col-sm-12 col-lg-12 col-xl-12">
+      <div class="row row-sm">
+        <div class="col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <button class="btn ripple btn-success" (click)="BasicOpen(basicmodal)"><i class="fe fe-edit me-1"></i>Nuevo personal</button> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-12 col-xl-12">
+            <div class="row row-sm">
+              <div class="col-md-6 col-lg-6 col-xl-2 col-sm-6" *ngFor="let shop of shopList">
+                <div class="card custom-card">
+                  <div class="p-4">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <div *ngIf="shop.badgeStatus;else else_content" class="products-badge">
+                                <span class="badge bg-{{shop.badge}} text-white">{{shop.badgeText}}</span>
+                            </div>
+                            <ng-template #else_content>
+                              <span class="product-discount-label bg-{{shop.badge}}">{{shop.badgeText}}</span>
+                            </ng-template>
+                            <a routerLink="/eCommerce/product-details" class="image">
+                              <img src="/assets/img/iconos/producto.png">
+                            </a>
+                            <a routerLink="/eCommerce/wishlist" class="product-like-icon" href="javascript:;"><i class="far fa-heart"></i></a>
+                            <div class="product-link">
+                              <a (click)="ModelProduct(producmodel)">
+                                <i class="fe fe-edit"></i>
+                                <span>Editar producto</span>
+                              </a>
+                            </div>
+                          </div>
+                     
+                      <div class="product-content">
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="title"><a href="javascript:;">{{shop.title}}</a></h3>
+                          </div>
+                          <div class="price text-end ms-auto">
+                            
+                            <span class="fs-18">{{shop.newValue}}</span>
+                          </div>
+                        </div>
+             
+                        <div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav>
+              <div class="d-flex justify-content-end">
+                
+              </div>
+            </nav>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #basicmodal let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-basic-title">Nuevo producto</h6>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <h6>Informacion</h6> -->
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+        dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn ripple btn-primary" type="button">Save changes</button>
+      <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+
+
+  <ng-template #producmodel let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-basic-title">Editar producto</h6>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <h6>Informacion</h6> -->
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+        dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn ripple btn-primary" type="button">Save changes</button>
+      <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>

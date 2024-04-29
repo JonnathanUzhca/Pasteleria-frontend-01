@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PersonaComponent } from './persona.component';
+import { Path } from 'leaflet';
+import { PersonalComponent } from './personal.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PersonaComponent
+    component: PersonalComponent
   }
 ];
 
@@ -13,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PersonaRoutingModule { }
+export class PersonalRoutingModule { }
