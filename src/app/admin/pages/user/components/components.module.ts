@@ -10,12 +10,12 @@ import { TablaPersonalComponent } from './tabla-personal/tabla-personal.componen
   ],
   imports: [
     CommonModule,
-    TablaClientesComponent
-    // TablaPersonalComponent
+    TablaClientesComponent,
+    TablaPersonalComponent
   ],
   exports:[
     TablaClientesComponent,
-    // TablaPersonalComponent
+    TablaPersonalComponent
   ]
 })
 export class ComponentsModule { }

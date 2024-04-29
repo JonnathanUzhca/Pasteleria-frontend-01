@@ -29,7 +29,7 @@ import { ComponentsModule } from './pages/user/components/components.module';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     ComponentsModule
 
   ]

@@ -4,6 +4,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 export interface UserData {
@@ -63,7 +64,7 @@ const NAMES: string[] = [
 export class TablaClientesComponent implements AfterViewInit{
 
 
-  displayedColumns: string[] = ['id', 'name', 'cedula', 'total','accion'];
+  displayedColumns: string[] = ['id', 'name', 'cedula','accion'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator)
@@ -71,13 +72,19 @@ export class TablaClientesComponent implements AfterViewInit{
   @ViewChild(MatSort)
   sort!: MatSort;
 
-  constructor() {
+  constructor(
+    private modalService: NgbModal
+  ) {
     // Create 100 users
     const users = Array.from({length: 30}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
+
+  BasicOpen(basicmodal:any) {
+    this.modalService.open(basicmodal);
+  } 
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
