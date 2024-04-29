@@ -27,7 +27,6 @@ import { SellingModule } from './selling/selling.module';
   imports: [
     BrowserModule,
     PublicModule,
-    AdminModule,
     SellingModule,
     BrowserAnimationsModule,
     AppRoutingModule,
