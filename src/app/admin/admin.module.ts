@@ -7,10 +7,10 @@ import { AdminComponent } from './admin.component';
 import { SharedModule } from '../shared/shared.module';
 import { BodyComponent } from './pages/body/body.component';
 import { ClienteComponent } from './pages/user/pages/cliente/cliente.component';
-import { PersonaComponent } from './pages/user/pages/persona/persona.component';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ProductComponent } from './pages/product/product.component';
 import { InvoicingComponent } from './pages/invoicing/invoicing.component';
+import { PersonalComponent } from './pages/user/pages/personal/personal.component';
 
 
 @NgModule({
@@ -18,10 +18,10 @@ import { InvoicingComponent } from './pages/invoicing/invoicing.component';
     AdminComponent,
     BodyComponent,
     ClienteComponent,
-    // PersonaComponent,
-    // StoresComponent,
-    // ProductComponent,
-    // InvoicingComponent,
+    PersonalComponent,
+    StoresComponent,
+    ProductComponent,
+    InvoicingComponent,
 
   ],
   imports: [

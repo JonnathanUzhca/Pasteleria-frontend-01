@@ -4,8 +4,8 @@ import { AdminComponent } from './admin.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StoresComponent } from './pages/stores/stores.component';
 import { ClienteComponent } from './pages/user/pages/cliente/cliente.component';
-import { PersonaComponent } from './pages/user/pages/persona/persona.component';
 import { InvoicingComponent } from './pages/invoicing/invoicing.component';
+import { PersonalComponent } from './pages/user/pages/personal/personal.component';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
         import('./pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       { path: 'user/client', component: ClienteComponent },
-      { path: 'user/person', component: PersonaComponent },
+      { path: 'user/person', component: PersonalComponent },
       { path: 'product', component: ProductComponent },
       { path: 'stores', component: StoresComponent },
       { path: 'invoicing', component: InvoicingComponent}
