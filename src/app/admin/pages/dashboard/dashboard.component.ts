@@ -1,8 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarView, } from 'angular-calendar';
-import { startOfDay, endOfDay, subDays, addDays, isSameDay, isSameMonth } from 'date-fns';
-import { Subject } from 'rxjs';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
