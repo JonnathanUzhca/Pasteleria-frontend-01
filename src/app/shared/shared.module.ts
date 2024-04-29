@@ -71,7 +71,6 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     FormsModule,
     FlexLayoutModule,
     NgScrollbarModule,
-    // PageHeaderComponent,
   ],
 })
 export class SharedModule {}

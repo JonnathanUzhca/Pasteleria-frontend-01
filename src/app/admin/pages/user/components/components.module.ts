@@ -7,11 +7,15 @@ import { TablaPersonalComponent } from './tabla-personal/tabla-personal.componen
 
 @NgModule({
   declarations: [
-    TablaClientesComponent,
-    TablaPersonalComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TablaClientesComponent
+    // TablaPersonalComponent
+  ],
+  exports:[
+    TablaClientesComponent,
+    // TablaPersonalComponent
   ]
 })
 export class ComponentsModule { }

@@ -11,6 +11,7 @@ import { StoresComponent } from './pages/stores/stores.component';
 import { ProductComponent } from './pages/product/product.component';
 import { InvoicingComponent } from './pages/invoicing/invoicing.component';
 import { PersonalComponent } from './pages/user/pages/personal/personal.component';
+import { ComponentsModule } from './pages/user/components/components.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { PersonalComponent } from './pages/user/pages/personal/personal.componen
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ComponentsModule
 
   ]
 })

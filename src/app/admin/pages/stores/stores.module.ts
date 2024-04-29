@@ -6,9 +6,7 @@ import { StoresComponent } from './stores.component';
 
 
 @NgModule({
-  declarations: [
-    StoresComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     StoresRoutingModule

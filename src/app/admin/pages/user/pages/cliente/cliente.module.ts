@@ -8,10 +8,7 @@ import { ComponentsModule } from '../../components/components.module';
 
 
 @NgModule({
-  declarations: [
-    ClienteComponent
-    
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     SharedModule,
