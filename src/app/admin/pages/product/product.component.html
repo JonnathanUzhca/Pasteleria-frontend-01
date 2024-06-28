@@ -17,16 +17,11 @@
                   <div class="p-4">
                     <div class="product-grid">
                         <div class="product-image">
-                            <div *ngIf="shop.badgeStatus;else else_content" class="products-badge">
-                                <span class="badge bg-{{shop.badge}} text-white">{{shop.badgeText}}</span>
-                            </div>
-                            <ng-template #else_content>
-                              <span class="product-discount-label bg-{{shop.badge}}">{{shop.badgeText}}</span>
-                            </ng-template>
-                            <a routerLink="/eCommerce/product-details" class="image">
+                           
+                            
                               <img src="/assets/img/iconos/producto.png">
-                            </a>
-                            <a routerLink="/eCommerce/wishlist" class="product-like-icon" href="javascript:;"><i class="far fa-heart"></i></a>
+                            
+                            <!-- <a routerLink="/eCommerce/wishlist" class="product-like-icon" href="javascript:;"><i class="far fa-heart"></i></a> -->
                             <div class="product-link">
                               <a (click)="ModelProduct(producmodel)">
                                 <i class="fe fe-edit"></i>
@@ -68,13 +63,67 @@
     <!-- BASIC MODAL -->
     <div class="modal-header">
       <h6 class="modal-title" id="modal-basic-title">Nuevo producto</h6>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      </button>
+      <!-- <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">dfdfdgdfgdfg
+      </button> -->
     </div>
     <div class="modal-body">
       <!-- <h6>Informacion</h6> -->
-      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-        dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div class="card custom-card">
+                <div class="card-header">
+                    <h6 class="main-content-label">Shipping Details</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name1" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name2" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <input type="email" class="form-control" id="inputEmail5" placeholder="Email Address">
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control" placeholder="AddressLine1">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="region" placeholder="Country/Region">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="city" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 mb-0">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="postal" placeholder="Zip/Postal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer mt-2">
+                        <a href="javascript:;" class="btn btn-primary">Confirm  Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <button class="btn ripple btn-primary" type="button">Save changes</button>
