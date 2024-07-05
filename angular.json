@@ -41,7 +41,8 @@
               "./node_modules/aos/dist/aos.css"
             ],
             "scripts": [
-              "./node_modules/aos/dist/aos.js"
+              "./node_modules/aos/dist/aos.js",
+              "src/assets/js/app.js"
                
             ]
           },
@@ -107,7 +108,9 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/app.js"
+            ]
           }
         }
       }
