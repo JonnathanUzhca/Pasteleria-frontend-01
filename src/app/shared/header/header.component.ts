@@ -19,9 +19,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   public text!: string;
   public SearchResultEmpty: boolean = false;
   slides = [
-    { text: 'Artículo 1', price: 19.99, image: 'assets/img/ejemplo/1.png' },
-    { text: 'Artículo 2', price: 29.99, image: 'assets/img/ejemplo/2.png' },
-    { text: 'Artículo 3', price: 39.99, image: 'assets/img/ejemplo/3.png' },
+    { text: 'Artículo 1', price: 19.99, image: 'assets/img/helados/helado03.png' },
+    { text: 'Artículo 2', price: 29.99, image: 'assets/img/helados/helado06.png' },
+    { text: 'Artículo 1', price: 19.99, image: 'assets/img/helados/helado07.png' },
+    { text: 'Artículo 1', price: 19.99, image: 'assets/img/helados/helado08.png' },
+    { text: 'Artículo 2', price: 29.99, image: 'assets/img/helados/helado04.png' },
     // Agrega más artículos según sea necesario
   ];
 
